@@ -6,7 +6,9 @@ from email.mime.multipart import MIMEMultipart
 smtp = smtplib.SMTP('smtp.gmail.com', 587)
 smtp.ehlo()
 smtp.starttls()
-smtp.login('your_email@gmail.com', 'your_password')
+email=input("Enter your email: ")
+password=input("Enter your password: ")
+smtp.login(email, password)
 
 # Create the email message
 msg = MIMEMultipart()
